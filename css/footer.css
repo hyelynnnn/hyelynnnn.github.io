@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.footer{
+    height: 100px;
+    line-height: 100px;
+    background-color: burlywood;
+    text-align: center;
+}
+
+.footer>h2{
+    color: white;
+}

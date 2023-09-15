@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수강신청</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
+    <style>
+       
+        table{
+            width: 500px;
+        }
+
+        th{
+            width: 50px;
+        }
+
+        td{
+           width: 450px;
+           text-align: left;
+        }
+
+        td>input {
+            height: 22px;
+        }
+    
+        tr:last-child>td {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header class="top_main">
+    <div class="top_title">
+        <h1>골프연습장 회원관리 프로그램</h1>
+    </div>
+    <nav id="top_menu">
+        <ul>    <!-- ul>li*5>a[href="#"] -->
+            <li><a href="teacher_select.html">강사조회</a></li>
+            <li><a href="sign_up.html">수강신청</a></li>
+            <li><a href="member.html">회원정보조회</a></li>
+            <li><a href="teacher_sales.html">강사매출현황</a></li>
+            <li><a href="../index.html">홈으로</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<!-- <tr>
+    <th>aaa</th>
+        <td>
+            <input type="text" name="aaa" id="aaa">
+            <input type="text" name="bbb" id="bbb" readonly="읽기전용">
+        </td>
+            readonly : 읽기전용, 입력 및 수정 불가, 수정페이지에서 회원아이디등에 적용
+            placeholder : 힌트, 설명글
+            required : 필수 입력, 입력 되지 않으면 전공(submit)이 안됨 
+    </tr>-->
+
+<div class="container">
+    <h1>수강신청</h1>
+
+    <!-- method는 전송 방식
+            get : 주소 표시줄에 전송 내용 표시
+            post : 파일에 첨가해서 보내는 것, 주소 표시줄에 전송내용 나타나지 않음
+    -->
+
+<form action="./sign_up.html" method="post" name="member_name">
+    
+    <table border="1">
+        <tr>
+            <th>수강월</th>
+            <td><input type="number" id="month" placeholder=" 수강월을 입력하세요."> 2022년 3월 예)202203</td>
+        </tr>
+        <tr>
+            <th>회원명</th>
+            <td><select name="text" id="member_name" required>회원명 <!-- required : 필수입력 -->
+                <option disabled>----회원명----</option>
+                <option value="member_name" selected>홍길동</option>
+                <option value="member_name" selected>장발장</option>
+                <option value="member_name" selected>임꺽정</option>
+                <option value="member_name" selected>성춘향</option>
+                <option value="member_name" selected>이몽룡</option>
+            </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <th>회원번호</th>
+            <td><input type="number" id="member_number"  placeholder=" 회원번호를 입력하세요."> 예)10001</td>
+        </tr>
+        <tr>
+            <th>강의장소</th>
+            <td><input type="radio" name="place" value="seoul" id="place">        <!--name을 값은 값으로 지정해야 그룹화가 되면서 하나씩만 선택 가능해짐, 중복 선택 x -->
+                <label for="text">서울본원</label>
+                <input type="radio" name="place" value="sungnam" id="place">
+                <label for="text">성남분원</label>
+                <input type="radio" name="place" value="daejeon" id="place">
+                <label for="text">대전분원</label>
+                <input type="radio" name="place" value="busan" id="place">
+                <label for="text">부산분원</label>
+                <input type="radio" name="place" value="daegu" id="place">
+                <label for="text">대구분원</label>
+            </td> 
+        </tr>
+
+        <tr>
+            <th>강의명</th>
+            <td><select name="text" id="class_signup">강의신청
+                <option disabled>----강의신청----</option>
+                <option value="class_signup" >초급반</option>
+                <option value="class_signup" >중급반</option>
+                <option value="class_signup" >고급반</option>
+                <option value="class_signup" >심화반</option>
+            </select>
+            </td>
+            
+        </tr>
+        <tr>
+            <th>수강료</th>
+            <td><input type="text"  placeholder=" 수강료를 입력하세요.">원</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="수강신청">
+                <input type="reset" value="다시쓰기">
+        </tr>
+    </table>
+</form>
+</div>
+
+<footer class="footer">
+    <h2>HRDKOREA Copyright&copy;</h2>
+</footer>
+
+</body>
+</html>

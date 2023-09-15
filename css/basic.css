@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0;}
+
+
+body{
+    width: 980px;   /* 12로 나누어 나머지가 0이 되는 값 */
+    margin: 0px auto;   /* 가운데 정렬 */
+    padding: 0;
+
+}
+
+ul,ol,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a, a:visited{   /*  a:visited : 방문(한번이라도 누르고 나오면)하고 나오면 색상이 변경되어 있는것 */
+    color: black;
+    text-decoration: none;
+}
+
+img{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
